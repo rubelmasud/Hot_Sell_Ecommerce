@@ -24,7 +24,7 @@ const Navbar = () => {
                 <NavLink to="/" className={({ isActive }) => isActive ? "active" : "default"} > Home </NavLink>
             </li>
             <li>
-                <NavLink to="/colleges" className={({ isActive }) => isActive ? "active" : "default"}>Shop </NavLink>
+                <NavLink to="/products" className={({ isActive }) => isActive ? "active" : "default"}>Products </NavLink>
             </li>
             <li>
                 <NavLink to="/admission" className={({ isActive }) => isActive ? "active" : "default"}>Blog </NavLink>
@@ -32,12 +32,18 @@ const Navbar = () => {
             <li>
                 <NavLink to="/admission" className={({ isActive }) => isActive ? "active" : "default"}>About </NavLink>
             </li>
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
-                <div className="indicator">
-                    <FaCartPlus size={20} />
-                    <span className="badge badge-sm indicator-item">0</span>
-                </div>
-            </label>
+
+            <li>
+                <NavLink to="/myCart" className={({ isActive }) => isActive ? "active" : "default"}>
+                    <label tabIndex={0} className="btn btn-ghost btn-circle">
+                        <div className="indicator">
+                            <FaCartPlus size={20} />
+                            <span className="badge badge-sm indicator-item">0</span>
+                        </div>
+                    </label>
+                </NavLink>
+            </li>
+
 
             {
                 user ? <div className="dropdown dropdown-end">
