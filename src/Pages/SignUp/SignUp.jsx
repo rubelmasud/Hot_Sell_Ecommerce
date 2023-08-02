@@ -1,30 +1,38 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
+import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import SocialLogin from "../../Components/Shared/SocialLogin/SocialLogin";
 
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [show, setShow] = useState(false)
+    const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from.pathname || '/'
 
     const onSubmit = data => {
         console.log(data);
-        // SignInUser(data.email, data.password)
-        //     .then((result) => {
-        //         result.user;
-        //         toast.success('User Log In Is Successfully !');
-        //         reset()
-        //         navigate(from, { replace: true })
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     })
+        createUser(data.email, data.password)
+            .then((result) => {
+                console.log(result);
+                result.user;
+                toast.success('User Log In Is Successfully !');
+                reset()
+                navigate(from, { replace: true })
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     };
 
     return (
-        <div className="h-screen  mt-20">
-            <form className="w-5/12 mx-auto flex gap-5 flex-col border p-6 shadow-lg bg-base-200" onSubmit={handleSubmit(onSubmit)}>
+        <div className="h-screen  md:mt-20 mt-6">
+            <form className="md:w-5/12 mx-auto flex gap-5 flex-col border p-6 shadow-lg bg-base-200" onSubmit={handleSubmit(onSubmit)}>
                 <h2 className="text-center font-semibold text-2xl">Place Register !!</h2>
 
                 <input type="text" placeholder="Place give me your name" {...register("name")} required />
@@ -60,9 +68,7 @@ const SignUp = () => {
                     <small> Al ready have an account ? </small>
                     <p className="text-teal-500 underline"><Link to='/login'>Place Login</Link></p>
                 </div>
-
-                <div className="divider">OR</div>
-
+                <SocialLogin />
             </form>
         </div>
     );

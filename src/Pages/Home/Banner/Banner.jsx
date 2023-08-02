@@ -9,7 +9,7 @@ const Banner = () => {
                 <h3 className='font-semibold text-3xl md:text-5xl text-teal-600'>On all products</h3>
                 <p className='md:text-lg text-xs text-slate-500'>Save more with coupons up to 70% Off !!</p>
                 <div className="justify-start">
-                    <button className='text-lg  bg-slate-400 w-fit md:px-4 px-2 md:py-1 my-4 text-white '>Shop now</button>
+                    <button className='text-lg  bg-slate-400 w-fit md:px-4 px-2 md:py-1 my-4 text-white animate-bounce'>Shop now</button>
                 </div>
             </div>
 
