@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.active {
+    background-color: transparent;
+    color: #11a79b;
+}
+
+li {
+    font-weight: 400;
+}
+
+.shadow-box {
+    box-shadow: 0px 0.5px 0px 0px;
+}
+
+input {
+    display: block;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    height: 36px;
+    padding: 10px;
+
+}

@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Formal Suit",
+        "category": "Man Dress",
+        "rating": 4.7,
+        "company": "Elegant Menswear",
+        "description": "A classic formal suit for special occasions and business events.",
+        "price": 149.99,
+        "image": "https://o.remove.bg/downloads/886ea9e1-d185-4495-84a3-e4a5c428c89a/512xAQued3L._AC_UX679_-removebg-preview.png"
+    },
+    {
+        "name": "Casual Button-Down Shirt",
+        "category": "Man Dress",
+        "rating": 4.5,
+        "company": "Casual Vibes",
+        "description": "A comfortable and stylish button-down shirt for everyday wear.",
+        "price": 39.99,
+        "image": "https://o.remove.bg/downloads/932ab9f0-238f-418c-8025-3cef29b316be/536354_LEPP_LF_C82-removebg-preview.png"
+    },
+    {
+        "name": "Sports Jacket",
+        "category": "Man Dress",
+        "rating": 4.9,
+        "company": "Active Gents",
+        "description": "A versatile sports jacket for a sporty and refined look.",
+        "price": 89.99,
+        "image": "https://o.remove.bg/downloads/e2baec18-2732-4c0a-9948-a3a1ea83387d/457641_LEPP_LB_BLA-removebg-preview.png"
+    },
+    {
+        "name": "Slim Fit Chinos",
+        "category": "Man Dress",
+        "rating": 4.2,
+        "company": "Modern Tailored",
+        "description": "Trendy slim fit chinos for a smart-casual style.",
+        "price": 49.99,
+        "image": "https://o.remove.bg/downloads/f67928ef-4887-4550-9162-cb690104e510/529050_LEPP_LB_KHA-removebg-preview.png"
+    },
+    {
+        "name": "Formal Dress Shirt",
+        "category": "Man Dress",
+        "rating": 4.6,
+        "company": "Classy Attire",
+        "description": "A crisp and elegant formal dress shirt for formal occasions.",
+        "price": 59.99,
+        "image": "https://o.remove.bg/downloads/fbb08100-2de1-484b-90c8-0f1d71a7a72c/533122_LEPP_LF_3SG-removebg-preview.png"
+    },
+    {
+        "name": "Denim Jeans",
+        "category": "Man Dress",
+        "rating": 4.8,
+        "company": "Denim Delight",
+        "description": "Classic denim jeans for a casual and rugged look.",
+        "price": 69.99,
+        "image": "https://o.remove.bg/downloads/9a1b534b-994c-441e-b1bf-b53c3581ed5a/526244_LEPP_LF_0V5-removebg-preview.png"
+    },
+    {
+        "name": "Leather Jacket",
+        "category": "Man Dress",
+        "rating": 4.4,
+        "company": "Urban Riders",
+        "description": "A stylish leather jacket for a cool and edgy appearance.",
+        "price": 129.99,
+        "image": "https://o.remove.bg/downloads/2d6ec37e-b60e-42bf-bea1-7230e3b4dada/503657_LEPP_LF_BRO-removebg-preview.png"
+    },
+    {
+        "name": "Business Trousers",
+        "category": "Man Dress",
+        "rating": 4.3,
+        "company": "Business Essentials",
+        "description": "Professional business trousers for a polished look.",
+        "price": 79.99,
+        "image": "https://o.remove.bg/downloads/886ea9e1-d185-4495-84a3-e4a5c428c89a/512xAQued3L._AC_UX679_-removebg-preview.png"
+    },
+    {
+        "name": "Polo Shirt",
+        "category": "Man Dress",
+        "rating": 4.0,
+        "company": "Sporty Classics",
+        "description": "A comfortable and stylish polo shirt for casual outings.",
+        "price": 34.99,
+        "image": "https://o.remove.bg/downloads/886ea9e1-d185-4495-84a3-e4a5c428c89a/512xAQued3L._AC_UX679_-removebg-preview.png"
+    },
+    {
+        "name": "Suede Loafers",
+        "category": "Man Dress",
+        "rating": 4.6,
+        "company": "Elegant Footwear",
+        "description": "Sophisticated suede loafers for a refined and comfortable fit.",
+        "price": 89.99,
+        "image": "https://o.remove.bg/downloads/886ea9e1-d185-4495-84a3-e4a5c428c89a/512xAQued3L._AC_UX679_-removebg-preview.png"
+    }
+]

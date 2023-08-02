@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "logo": "https://i.ibb.co/hLyg8Yy/friends-with-bags-shopping-clothes-online-74855-17047-removebg-preview.png",
+        "name": "Free Shopping"
+    },
+    {
+        "id": 2,
+        "logo": "https://i.ibb.co/z5hFZBQ/online-food-order-delivery-service-108855-3624.jpg",
+        "name": "Online Order"
+    },
+    {
+        "id": 3,
+        "logo": "https://i.ibb.co/6vMRPSd/boy-saving-money-piggy-bank-7710-173.jpg",
+        "name": "Saved Money"
+    },
+    {
+        "id": 4,
+        "logo": "https://i.ibb.co/tm3Ndmm/application-purchase-online-app-market-program-assortment-software-development-promotion-geolocation.jpg",
+        "name": "Promotions"
+    },
+    {
+        "id": 5,
+        "logo": "https://i.ibb.co/HtXh8dz/flat-hand-drawn-people-shopping-sale-52683-55361.jpg",
+        "name": "Happy Self"
+    },
+    {
+        "id": 6,
+        "logo": "https://i.ibb.co/Mp8B8nk/call-center-design-24877-49651.jpg",
+        "name": "24/7 Support"
+    }
+]
