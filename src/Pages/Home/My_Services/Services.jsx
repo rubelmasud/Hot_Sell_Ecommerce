@@ -16,7 +16,7 @@ const Services = () => {
             });
     }, []);
     return (
-        <div className="mt-12 bg-base-200 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4 pt-4 px-4">
+        <div className=" grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4 pt-4 px-4">
             {
                 allServices.map(service => <div key={service.id} className=" text-center border shadow-lg p-4">
                     <img className="h-28 mx-auto hover:shadow-xl hover:-translate-y-4 duration-500" src={service.logo} alt="" />

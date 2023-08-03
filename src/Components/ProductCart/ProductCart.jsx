@@ -1,12 +1,14 @@
-import { useContext } from 'react';
+import { toast } from "react-toastify";
+import useCart from "../../Hooks/useCart";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 import { FaCartPlus } from 'react-icons/fa';
-import { AuthContext } from '../Provider/AuthProvider';
-import toast, { Toaster } from 'react-hot-toast';
-import useCart from '../Hooks/useCart';
+import { Toaster } from "react-hot-toast";
 
 
-const FeaturedProductCart = ({ feature }) => {
-    const { image, price, company, name, rating } = feature || {}
+const ProductCart = ({ product }) => {
+    const { image, price, company, name, rating } = product || {}
+
     const { user } = useContext(AuthContext)
     const [, refetch] = useCart()
 
@@ -34,11 +36,10 @@ const FeaturedProductCart = ({ feature }) => {
         }
 
     }
-
     return (
         <div className="border rounded-md shadow hover:bg-white  duration-1000">
             <div className="m-2 border bg-base-200 rounded-md">
-                <img className="h-40 mx-auto hover:-translate-y-8 duration-1000" src={image} alt="" />
+                <img className="h-40 mx-auto hover:-translate-y-8 duration-1000 w-fit" src={image} alt="" />
             </div>
             <div className="m-2">
                 <p className="text-gray-400 ">{company}</p>
@@ -46,7 +47,7 @@ const FeaturedProductCart = ({ feature }) => {
                 <p>{rating}</p>
                 <span className='flex justify-between'>
                     <p className="text-teal-500 font-bold">$ {price}</p>
-                    <button onClick={() => HandleAddToCart(feature)} className="btn btn-circle btn-sm bg-teal-100">
+                    <button onClick={() => HandleAddToCart(product)} className="btn btn-circle btn-sm bg-teal-100">
                         <FaCartPlus />
                     </button>
                 </span>
@@ -56,4 +57,4 @@ const FeaturedProductCart = ({ feature }) => {
     );
 };
 
-export default FeaturedProductCart;
+export default ProductCart;

@@ -15,9 +15,22 @@ const SocialLogin = () => {
     const HandleGoogleLogin = () => {
         signInGoogle()
             .then((result) => {
-                console.log(result);
-                toast.success('User Log In Is Successfully !');
-                navigate(from, { replace: true })
+                const logedUser = result.user;
+                const userInfo = { email: logedUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            toast.success('User Log In Is Successfully !');
+                            navigate(from, { replace: true })
+                        }
+                    })
             }).catch((error) => {
                 console.log(error);
 

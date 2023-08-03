@@ -19,11 +19,24 @@ const SignUp = () => {
         console.log(data);
         createUser(data.email, data.password)
             .then((result) => {
-                console.log(result);
-                result.user;
-                toast.success('User Log In Is Successfully !');
-                reset()
-                navigate(from, { replace: true })
+                const logedUser = result.user;
+                const userInfo = { email: logedUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: "POST",
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userInfo)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            reset()
+                            toast.success('User Log In Is Successfully !');
+                            navigate(from, { replace: true })
+                        }
+                    })
+
             })
             .catch((error) => {
                 console.log(error);

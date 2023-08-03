@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
+
 import FeaturedProductCart from "../../../../Components/FeaturedProductCart";
+import useFeaturedProducts from './../../../../Hooks/useFeaturedProducts';
+
 
 
 const FeaturedProduct = () => {
-    const [FeaturedProduct, setFeaturedProduct] = useState([])
-    useEffect(() => {
-        fetch('FeaturedProduct.json')
-            .then(res => res.json())
-            .then(data => {
-                setFeaturedProduct(data)
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
+    const [featuredProducts] = useFeaturedProducts()
     return (
         <div className=" px-12">
             <div className="font-serif text-center mt-16 mb-10">
@@ -23,7 +14,7 @@ const FeaturedProduct = () => {
             </div>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-6">
                 {
-                    FeaturedProduct.map(feature => <FeaturedProductCart key={feature.name} feature={feature} />)
+                    featuredProducts.map(feature => <FeaturedProductCart key={feature.name} feature={feature} />)
                 }
             </div>
         </div>

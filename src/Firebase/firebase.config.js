@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCBK5j6XPN3MZyiLVfHV2WVawpE2roMdYk",
-    authDomain: "hot-sell-e-commerce.firebaseapp.com",
-    projectId: "hot-sell-e-commerce",
-    storageBucket: "hot-sell-e-commerce.appspot.com",
-    messagingSenderId: "597932904253",
-    appId: "1:597932904253:web:8cf752d2c79fed439dbf54"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
