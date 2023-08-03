@@ -7,7 +7,7 @@ const useCart = () => {
     const { refetch, data: myCartProducts = [] } = useQuery({
         queryKey: ['myCartProducts', user?.email],
         queryFn: async () => {
-            const response = await fetch(`http://localhost:5000/myCartProducts?email=${user?.email}`)
+            const response = await fetch(`https://hot-sell-server.vercel.app/myCartProducts?email=${user?.email}`)
             return response.json()
         },
     })

@@ -17,7 +17,7 @@ const SocialLogin = () => {
             .then((result) => {
                 const logedUser = result.user;
                 const userInfo = { email: logedUser.email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://hot-sell-server.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'

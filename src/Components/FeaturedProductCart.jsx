@@ -3,6 +3,8 @@ import { FaCartPlus } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import useCart from '../Hooks/useCart';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 
 const FeaturedProductCart = ({ feature }) => {
@@ -14,7 +16,7 @@ const FeaturedProductCart = ({ feature }) => {
 
         if (user) {
             const ProductInfo = { product: product, email: user.email }
-            fetch('http://localhost:5000/cartProduct', {
+            fetch('https://hot-sell-server.vercel.app/cartProduct', {
                 method: 'post',
                 headers: {
                     'content-type': 'application/json'
@@ -43,7 +45,7 @@ const FeaturedProductCart = ({ feature }) => {
             <div className="m-2">
                 <p className="text-gray-400 ">{company}</p>
                 <h5 className="text-lg font-semibold">{name}</h5>
-                <p>{rating}</p>
+                <p><Rating style={{ maxWidth: 80 }} value={rating} readOnly /></p>
                 <span className='flex justify-between'>
                     <p className="text-teal-500 font-bold">$ {price}</p>
                     <button onClick={() => HandleAddToCart(feature)} className="btn btn-circle btn-sm bg-teal-100">

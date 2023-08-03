@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import ProductCart from "../../Components/ProductCart/ProductCart";
 
 
-
 const Products = () => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://hot-sell-server.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -18,7 +17,7 @@ const Products = () => {
 
     return (
         <div className="mt-12">
-            <div className="flex w-4/12 mx-auto mb-6">
+            <div className="flex md:w-4/12 mx-auto mb-6 px-4">
                 <input placeholder="Place search the product name" type="text" />
                 <button className="bg-gray-500 px-2 text-white">Search</button>
             </div>

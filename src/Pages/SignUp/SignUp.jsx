@@ -21,7 +21,7 @@ const SignUp = () => {
             .then((result) => {
                 const logedUser = result.user;
                 const userInfo = { email: logedUser.email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://hot-sell-server.vercel.app/users', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json'
@@ -75,7 +75,7 @@ const SignUp = () => {
 
 
                 <div className="w-11/12 mx-auto ">
-                    <button className='text-lg  bg-slate-400 w-full px-4 py-1 text-white ' type="submit">Log In</button>
+                    <button className='text-lg  bg-slate-400 w-full px-4 py-1 text-white ' type="submit">Register</button>
                 </div>
                 <div className="w-[90%] mx-auto flex gap-3">
                     <small> Al ready have an account ? </small>
