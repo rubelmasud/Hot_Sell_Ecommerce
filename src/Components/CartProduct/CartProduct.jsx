@@ -7,7 +7,7 @@ const CartProduct = ({ product, handleDetails, handleDelete }) => {
 
     return (
         <div className="border shadow-sm bg-base-200 flex  items-center my-1 rounded-sm">
-            <img className="h-24 m-2 bg-slate-700 rounded-md" src={image} alt="" />
+            <img className="h-24 w-[25%] m-2 mr-6 bg-slate-700 rounded-md" src={image} alt="" />
             <div className="w-full flex justify-between  mr-6">
                 <div className='font-semibold'>
                     <p className='text-lg '>{name}</p>
